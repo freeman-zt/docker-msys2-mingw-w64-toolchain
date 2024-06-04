@@ -1,5 +1,6 @@
 name: Publish
-
+env:
+  IMG_NAME: windows_build
 on:
   push:
     branches: [ "master" ]
