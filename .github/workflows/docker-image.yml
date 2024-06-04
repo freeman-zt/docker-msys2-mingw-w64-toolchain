@@ -35,7 +35,7 @@ jobs:
             --build-arg VERSION="ltsc${{ matrix.version }}"
             --build-arg TOOLCHAIN="mingw-w64-ucrt-x86_64-toolchain"
             --build-arg MSYSTEM=UCRT64
-            -t freeman1983/${{ vars.IMG_NAME }}:gcc-ucrt-ltsc${{ matrix.version }} 
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.IMG_NAME }}:gcc-ucrt-ltsc${{ matrix.version }} 
             .
 
       - name: Build clang-i686
